@@ -1,0 +1,118 @@
+/* App.css - Cute Light Cartoon Theme */
+
+.app {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  background: #e0f7fa; /* light blue background */
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #0077b6;
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.chat-container {
+  border: 2px solid #00b4d8;
+  border-radius: 15px;
+  padding: 10px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* Chat message bubbles */
+.message {
+  margin: 5px 0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 80%;
+  white-space: normal;      /* allow line wrapping */
+  word-break: break-word;   /* break long words */
+  line-height: 1.4;  
+  word-wrap: break-word;    /* wrap long words */
+  overflow-wrap: break-word;   /* preserve line breaks */
+  font-size: 0.95em;
+  line-height: 1.4;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+     /* slightly reduced padding */          /* ensures bubble stays inside chat area */
+  
+}
+.message.user {
+  background-color: #90e0ef; /* light cyan */
+  align-self: flex-end;
+  color: #03045e;
+}
+
+.message.bot {
+  background-color: #caf0f8; /* lighter cyan */
+  align-self: flex-start;
+  color: #023e8a;
+}
+
+/* Input & buttons */
+.controls, .upload-form {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.controls input[type="text"], .upload-form input[type="file"] {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 25px;
+  border: 2px solid #0077b6;
+  font-size: 1em;
+}
+
+.controls button, .upload-form button {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: none;
+  background-color: #0077b6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.controls button:hover, .upload-form button:hover {
+  background-color: #0096c7;
+}
+
+.controls button:disabled, .upload-form button:disabled {
+  background-color: #90e0ef;
+  cursor: not-allowed;
+}
+
+/* Scrollbar styling (optional) */
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: #00b4d8;
+  border-radius: 3px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
