@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# Navigate to Backend
+# Navigate to backend
 cd Backend
 
-# Install Python dependencies
-pip install -r requirements.txt
+# Install dependencies
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 
-# Start the FastAPI server
-uvicorn main:app --host 0.0.0.0 --port $PORT
+# Start FastAPI server
+python -m uvicorn main:app --host 0.0.0.0 --port $PORT
